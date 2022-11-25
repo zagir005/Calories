@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="116dp"
+    android:clipToPadding="false"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/date_pick_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="Сегодня, 12 ноября" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="0.1"
+                        android:layout_marginTop="2dp"
+                        android:background="?attr/colorPrimary"
+                        />
+
+                </LinearLayout>
+
+                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                    android:id="@+id/calories_progress_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="16dp"
+                    app:direction="clockwise"
+                    app:layout_constraintBottom_toTopOf="@+id/linear_layout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_layout1"
+                    app:progressCap="round"
+                    app:progressStrokeWidth="13dp"
+                    app:startAngle="90" />
+
+                <LinearLayout
+                    android:id="@+id/linear_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Белки" />
+
+                        <com.skydoves.progressview.ProgressView
+                            android:id="@+id/protein_pb"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginVertical="4dp"
+                            app:progressView_autoAnimate="true"
+                            app:progressView_colorBackground="@color/grey_background"
+                            app:progressView_colorProgress="?attr/colorPrimary"
+                            app:progressView_max="100"
+                            app:progressView_min="0"
+                            app:progressView_progress="100"
+                            app:progressView_radius="10dp" />
+
+                        <TextView
+                            android:id="@+id/protein_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="31/358 гр." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Жиры" />
+
+                        <com.skydoves.progressview.ProgressView
+                            android:id="@+id/fat_pb"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginVertical="4dp"
+                            app:progressView_autoAnimate="true"
+                            app:progressView_colorBackground="@color/grey_background"
+                            app:progressView_colorProgress="?attr/colorPrimary"
+                            app:progressView_max="100"
+                            app:progressView_min="0"
+                            app:progressView_progress="50"
+                            app:progressView_radius="10dp" />
+
+                        <TextView
+                            android:id="@+id/fat_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="31/358 гр." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Углеводы" />
+
+                        <com.skydoves.progressview.ProgressView
+                            android:id="@+id/uglevod_pb"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginVertical="4dp"
+                            app:progressView_autoAnimate="true"
+                            app:progressView_colorBackground="@color/grey_background"
+                            app:progressView_colorProgress="?attr/colorPrimary"
+                            app:progressView_max="100"
+                            app:progressView_min="0"
+                            app:progressView_progress="50"
+                            app:progressView_radius="10dp" />
+
+                        <TextView
+                            android:id="@+id/uglevod_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="31/358 гр." />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/settings_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_settings" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dishes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/recycler_item_dish"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
